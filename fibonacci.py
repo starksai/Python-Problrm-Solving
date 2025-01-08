@@ -62,21 +62,57 @@
 
 ####################################################################################################################
 ####################################################################################################################
-num = int(input("enter a num: "))
-a,b = 0,1
 
 
-while a <= num:
-    # print(a)
-    a,b = b,a+b
-left,right = b-a,a
-# print(left,right)
-res = left if num-left < right-num else right
+# num = int(input("enter a num: "))
+# a,b = 0,1
+
+
+# while a <= num:
+#     # print(a)
+#     a,b = b,a+b
+# left,right = b-a,a
+# # print(left,right)
+# res = left if num-left < right-num else right
     
-print(res)
+# print(res)
 
       
       
 
+####################################################################################################################
 
 
+# WAP to print first n numbers missing fib numbers.
+
+# num = int(input("e: "))
+
+# a,b = 0,1
+# count = 0
+# while num != count:
+#     for i in range(a+1,b):
+#         print(i,end=" ")
+#         count += 1
+#         if count == num:
+#             break
+#     a,b = b ,a+b
+
+
+####################################################################################################################
+
+
+# WAP to print the sum of nonfib numbers as per input
+
+num = int(input("enter a number: "))
+nonFibSum = 0
+a,b = 0,1  # 1 1 # 1 2 # 2 3 # 3 5 # 5 8
+count = 0
+while num != count:
+    for i in range(a+1,b):
+        nonFibSum += i
+        count += 1
+        if count == num:
+            break
+    a,b = b ,a+b
+    
+print("the sum of missing non fib numbers is {}".format(nonFibSum))
