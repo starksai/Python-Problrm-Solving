@@ -93,4 +93,25 @@
 ####################################################################################################################
 
         
-        
+
+# u have a matrix of n x n like
+
+#    1 2 3
+#    4 5 6
+#    7 8 9   the output is => 7 4 1 5 9 6 3  it is like N shape
+
+
+mat = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]]
+
+def fn(m):
+    
+    for i in range(len(mat)):
+        for j in range(len(m[i])-1,-1,-1):
+            if i==j or i==0 or i==len(m[i])-1:
+                print(m[j][i],end=" ")
+    
+    
+fn(mat)
